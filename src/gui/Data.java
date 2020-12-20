@@ -51,20 +51,20 @@ public class Data implements Comparable<Data>
     }
     
     /**
-     * 
+     * Data(Long counter, BigDecimal deltaTime, BigDecimal distance) - Konstruktor aus allen Attributen...
      * @param counter
      * @param duration
      * @param distance
      */
     public Data(Long counter, BigDecimal deltaTime, BigDecimal distance)
     {
-        this.counter = (counter != null)? counter : null;
+        this.counter = (counter != null)? counter : Long.valueOf(0L);
         this.deltaTime = (deltaTime != null)? deltaTime : BigDecimal.ZERO;
         this.distance = (distance != null)? distance : BigDecimal.ZERO;
     }
     
     /**
-     * 
+     * getKeys() - liefert Array mit allen Keys...
      * @return String[]
      */
     public String[] getKeys()
@@ -73,7 +73,6 @@ public class Data implements Comparable<Data>
                              Data.DELTA_TIME_KEY,
                              Data.DISTANCE_KEY};
     }    
-    
     
     /**
      * getValue(String key) - Bereitstellung der Anzeige...
